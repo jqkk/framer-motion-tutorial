@@ -10,7 +10,7 @@
 
 ## 트랜지션(Transitions)
 
-- 기본적으로, 애니메이션 타입에 따라 적절한 트랜지션이 설정되어 있다. 예를 들어 물리적 속성(x or scale 설정)은 spring simulation으로 설정된다. 반명 opacity나 color는 tween으로 설정된다.
+- 기본적으로, 애니메이션 타입에 따라 적절한 트랜지션이 설정되어 있다. 예를 들어 물리적 속성(x or scale 설정)은 spring simulation으로 설정된다. 반면 opacity나 color는 tween으로 설정된다.
 - transition props 설정을 통해 직접 정의내릴수 있다.
 
 ```jsx

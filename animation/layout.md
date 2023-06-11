@@ -13,3 +13,32 @@
 - 모든 레이아웃 애니메이션은 `transform` 프로퍼티를 사용하여 수행된다.
 - `transform`를 사용한 레이아웃 애니메이션은 자식 엘리먼트를 시각적으로 왜곡할 수도 있다.
 - 이러한 왜곡을 수정하기 위해 요소의 첫번째 자식 요소에도 `layout`프로퍼티를 지정할 수 있다.
+
+## 스크롤 컨테이너 안에서의 애니메이션
+- 스크롤 컨테이너 안에서의 애니메이션은 적용하려면 해당 element에 `layoutScroll` 프로퍼티를 지정해야 한다.
+```jsx
+<motion.div
+  layoutScroll
+  style={{ overflow: "scroll" }}
+/>
+```
+
+## 레이아웃 애니메이션 그룹핑
+- `LayoutGroup`를 래핑하여 여러 구성 요소 간에 레이아웃 변경 사항을 동기화할 수 있다.
+```jsx
+import { LayoutGroup } from "framer-motion"
+
+function List() {
+  return (
+    <LayoutGroup>
+      <Accordion />
+      <Accordion />
+    </LayoutGroup>  
+  )
+}
+```
+
+## 공유된 레이아웃 애니메이션
+```jsx
+isSelected && <motion.div layoutId="underline" />
+```
